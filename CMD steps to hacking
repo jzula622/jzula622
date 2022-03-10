@@ -1,0 +1,82 @@
+CMD:Changing your IP address can be useful for a variety of reasons. If you need to change yours, type:
+
+ipconfig /release
+
+ipconfig /renew
+
+The first command releases your current IP address, the second command gets a new IP address for your machine.
+
+Clearing your computer's DNS can be used whenever a site changes its IP address so you won't be misled. Write and enjoy a clean start.
+
+ipconfig /flushdns
+
+You can find out if packets can be delivered to a device with the ping command. Just type or change URL and IP ADDRESS in Command and packages will be sent. If you bring them back you will make sure everything works fine.
+
+ping URL
+
+
+ping IP ADDRESS
+
+Pc  close:
+If you want to shut down the other party's PC, type shutdown -f in the .txt file, write the file .bat and send it to the target, then the target's PC will shut down in 1 minute (there will be no reset, only one device will shut down
+
+CMD hash operation:
+
+Scanning and Repairing Files
+To scan and repair files on your computer, type:
+
+sfc /scannow
+
+and press Enter. The time this task will take depends on how fast your computer is. This can easily take up to an hour.
+
+Manage Your Computer's Energy
+There are various things you can see on your computer with the powercfg command. For example, using the command
+
+powercfg /a
+
+You can view the sleep states of your computer.
+
+Powercfg can also let you do things like:
+
+powercfg /list – Shows all power schemes in the current user's environment
+
+powercfg / energy – After observing your computer for 60 seconds, it will generate an HTML report with data about your computer's energy efficiency.
+
+powercfg / sleepstudy – If your device supports InstantGo devices and applications, you can find out which ones wake your computer using this command.
+
+powercfg / query – Returns a subset of power settings GUID.
+
+Assoc
+The files are associated with a specific program in Windows. When you open a program, certain files open automatically. If you want to associate these files with a program, you can use the assoc command.
+
+By typing Assoc at the command prompt, you can see a list of program associations and filename extensions. Suppose you want text files to be associated with something else:
+
+assoc.txt = “APPLICATION NAME”
+
+(Replace “APPLICATION NAME” with the full application name.)
+
+Hide Folders
+If there is a folder with sensitive information, you can hide it using this simple command. Type the drive where this file is located and then type
+
+attrib + h + h + r
+
+Then enter the name of the folder you want to hide.
+
+Get a List of Your Computer's Drivers
+Find out if you have installed this driver using the driverquery command. Press Login once entered; you will see a list of every driver on your computer. You'll see information such as Connection date, Name, and Type.
+
+Find Shared Folders
+To see the folders you have shared, simply type the command
+
+net share
+
+and press Enter. The command will also show shared names
+
+Running cmd commands as Administrator
+Using this command you can run any command as an administrator even if the person using the computer does not have this privilege.
+
+runas /user:yourdomain\admin cmd
+
+and then make some changes.
+
+Add your real domain name and add your admin to a Domain Admin's real username. Replace CMD with the command you want to try and you can run as administrator regardless of who is logged in.
