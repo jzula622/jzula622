@@ -80,3 +80,61 @@ runas /user:yourdomain\admin cmd
 and then make some changes.
 
 Add your real domain name and add your admin to a Domain Admin's real username. Replace CMD with the command you want to try and you can run as administrator regardless of who is logged in.
+
+
+Most Used (CMD) Hacker Codes
+cmd commands
+ping 192.168.0.2 ===> Tests the connection by sending and receiving small data packets to the other computer on the ip
+ping client98
+ping -a 192.168.0.2 ===> Tests the connection by sending and receiving small data packets to the other computer on the ip. With the “-a” parameter, the address of the computer on the ip is displayed.
+ping -a -n 20 192.168.0.2 ===> It is tested by sending data packets equal to the value next to the -n parameter.
+pathping ===> With this command, it is checked whether the data passing over the routers is lost or not.
+ipconfig ===> shows the computer's ip address on the network.
+
+ipconfig /all ===> shows the computer's ip address on the network and many extras.
+ipconfig /all >sovereign.txt ===> dumps all spilled information into sovereign.txt file.
+ipconfig /release ===> releases the computer's ip from the network
+ipconfig /renew ===> renews the computer's ip on the network. During the renewal process, first “release”, then “renew” is applied.
+ipconfig /registerdns ===> is used to register the computer name and ip to DNS.
+ipconfig /flushdns ===> It deletes the information about name and ip address matches that DNS clients keep in their cache memory, frees cache memory. (Used to solve problems)
+ipconfig /displaydns ===> If the computer you are using is also a DNS client, it allows the IP addresses in the DNS Cache memory and their DNS names to be displayed.
+arp -a ===> shows the ip resolution in the cache. If there is no new ip resolution within 2 minutes, the cache will clear itself. If refreshed within 2 minutes, it will be held for another 10 minutes.
+arp -a 192.168.0.2 ===>
+arp -s 192.168.0.2 00-02-44-12-24-ad ===> Fixes the "mac" address of the computer whose ip si is given in ip resolution. cache also remains permanently, not deleted.
+–
+net use ===> shows the maps on the computer.
+net use h: \\\\client98\\c ===> maps client 98 computer's C to H.
+net use h: \\\\192.168.0.2\\cş ===> maps the hidden admin share of the given computer as h.
+net use /delete h: ===> deletes the h mapped drive.
+net use lpt1: \\\\server\\ibm /persistent ===> provides permanent printer connection.
+netstat ===> shows connections made to the computer.
+nbtstat ===> It allows to show NetBIOS API related data on TCP/IP. It enables Netbios name table to be shown both for the computer you use (local) and for other computers on the network (remote).
+nbtstat -RR ===> If you are running the command on a WINS client, the WINS Client will first delete the self-registers on the WINS server; then it will re-register. (Used to fix the problem)
+tracert 131.107.10.1 ===> Thanks to this command, ICMP packets are sent to the same destination using different TTL times. In this way, it is checked which paths our packets follow while reaching another destination from your computer.
+With this command, a list of routers that determine the closest and shortest path between the target computer and you will be displayed.
+tracert [-d][-h Maximum Hops][-J Hot List][-w Timeout][Target name]
+route print ===> Dumps the routing table.
+net helpmsg 52 ===> dumps the description of the error codes.
+net view ===>
+net view \\\\192.168.0.2 ===> Shows the shared objects of the computer with ip si.
+net view \\\\client98 ===> shows the shared objects of the named computer.
+net share ===> shows the shared drives and folders on the computer.
+net share hoop=f:\\hoop ===> Shares the hoop folder we created on the f drive with the same name.
+hostname ===> shows the name of the computer.
+%username% ===> is the username with your computer logon.
+%systemroot% ===> is the folder where the operating system is installed.
+%userprofile% ===>
+net time \\\\192.168.0.2 ===> Shows the date and time of the computer with the ip entered.
+net time \\\\client98 ===> shows the date and time of the computer whose name is entered.
+net time \\\\client98 /set /y ===> sets the machine we are using according to the date and time of the named computer.
+convert c: /fs:ntfs ===> Converts drive C to NTFS system. The information in it is not deleted.
+net help command ===> displays a description of all commands linked to the net command.
+secedit /refreshpolicy user_policy ===> It is used to take effect immediately on the basis of the changes made in the policies.
+secedit /refreshpolicy machine_policy ===> It is used to enable the changes made in the policies to take effect immediately on a computer basis.
+secedit /refreshpolicy user_policy /enforce ===> Forces policy changes to take effect immediately.
+secedit /refreshpolicy machine_policy /enforce ==> Forces policy changes to take effect immediately.
+nslookup ===> Checks if DNS is working properly.
+The nslookup command is entered and then:
+ls -t SRV mcseankara.com (checks SRV records)
+ls -t SRV mcseankara.com > sovereign.txt (It puts SRV records into sovereign.txt file and it should be 24 records)
+192.168.0.1 (reverse lookup in
